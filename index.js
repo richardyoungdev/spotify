@@ -27,10 +27,10 @@ const myAsyncFn = async () => {
     // you can add WHERE clauses
     const songs = await Song.findAll();
 
-    console.log(songs);
-    console.log(songs[0]);
-    console.log(songs[0].title);
-    console.log(songs[1]);
+    // console.log(songs);
+    // console.log(songs[0]);
+    console.log("songs[0].title value is:",songs[0].title);
+    // console.log(songs[1]);
 };
 
 myAsyncFn();

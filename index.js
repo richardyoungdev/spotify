@@ -66,6 +66,7 @@ Album.hasMany(Song);
 // Therefore, it can also be... Artist.hasMany(Album)
 // Album.belongsTo(Artist);
 
+// through: is naming the table.
 Album.belongsToMany(Artist, {through: "album_to_artist"});
 Artist.belongsToMany(Album, {through: "album_to_artist"});
 

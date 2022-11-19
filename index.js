@@ -119,6 +119,13 @@ const myAsyncFn = async () => {
     await beatlesAlbumAbby.addArtist(beatlesArtist)
     await beatlesAlbumAbby.addArtist(richieArtist)
 
+
+    const albumWithTheirArtists = await Album.findAll({
+        include: [Artist]
+    });
+
+    console.log(albumWithTheirArtists[1].artists[0].name)
+
     // assign beatles song to beatles album based on id
     // await beatlesSong.setAlbum(beatlesAlbum.id)
 
